@@ -6,6 +6,10 @@
     padding: 0;
 }
 
+:root {
+    --primary-color: #047aed;
+}
+
 body {
     font-family: 'Lato', sans-serif;
     color:#333;
@@ -35,12 +39,56 @@ img {
     width:100%;
 }
 
+/*Navbar*/
+
 .navbar {
     background-color: #047aed;
     color:#fff;
     height:70px;
 
 }
+
+.navbar ul {
+    display: flex; /*links will line up horizontally*/
+}
+
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover{
+    border-bottom: 2px #fff solid;
+}
+
+.navbar .flex {
+    justify-content: space-between;/*puts space between h1,h2 elements*/
+}
+
+/*Showcase*/
+
+.showcase {
+    height: 400px;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: relative; /*so we can position anything absolute within showcase*/
+}
+
+.showcase h1 {
+    font-size: 40px;
+}
+
+.showcase p {
+    margin:  20px 0;
+}
+
+.showcase .grid {
+    grid-template-columns: 55% 45%;
+
+}
+
+/*Utilities - aka classes we use all over website*/
 
 .container {
     max-width: 1100px; /*navbar stays within this limit when stretched past 1100px*/
@@ -50,11 +98,20 @@ img {
 
 }
 
-/*Utility class added to conatiner class in order to make it a flex container so H1 can be positioned on left and h2 on right*/
+/*Utility class added to container class in order to make it a flex container so H1 can be positioned on left and h2 on right*/
 
 .flex {
     display: flex;
     justify-content: center; /*pertains to main axis*/
     align-items: center;/*pertains to cross axis*/
     height: 100%;/*100% height of container*/
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap:20px;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /*pushes items down to middle. showcase has height so grid needs one too*/
 }
