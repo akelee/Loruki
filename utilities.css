@@ -34,6 +34,24 @@
     transform: scale(0.98);
 }
 
+/*Backgrounds and Coloured Buttons*/
+.bg-primary, .btn-primary {
+    border-color: var(--primary-color);
+    color: #fff;
+}
+.bg-secondary, .btn-secondary {
+    border-color: var(--secondary-color);
+    color: #fff;
+}
+.bg-dark, .btn-dark {
+    border-color: var(--dark-color);
+    color: #fff;
+}
+.bg-light, .btn-light {
+    border-color: var(--light-color);
+    color: #333;
+}
+
 .text-center {
     text-align: center;
 }
