@@ -84,34 +84,69 @@ img {
 }
 
 .showcase .grid {
-    grid-template-columns: 55% 45%;
+    grid-template-columns: 55% 45%; /*for text and for respectively*/
+    gap: 30px; 
+    overflow:visible; /*to get rid of scroll bar and form end is visible*/
 
 }
 
-/*Utilities - aka classes we use all over website*/
+.showcase-form {
+    position: relative; /*Because we wanna add a TOP property*/
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+}
 
-.container {
-    max-width: 1100px; /*navbar stays within this limit when stretched past 1100px*/
-    margin:0 auto; /*make it appear in the middle*/
-    overflow: auto; /*gets rids of 10px apscing on top due to h1/h2 10px margin*/
-    padding: 0 40px; /*0 Top/bottom, 40 L/R*/
+.showcase-form .form-control {
+    margin: 30px 0; /*gaps btw form elements*/
+}
+
+.showcase-form input[type='text'],
+.showcase-form input[type='email'] {
+    border:0;
+    border-bottom: 1px solid #b4becb;
+    width: 100%; /*so border bottom stretches all the way across*/
+    padding: 3px;
+    font-size: 16px;
+}
+
+.showcase-form input:focus {
+    outline:none;
+}
+
+.showcase::before,.showcase::after {/*needs a content property*/
+    content:'';
+    position:absolute;
+    height: 100px;
+    bottom: -70px;
+    right:0;
+    left:0;
+    background:#fff;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg); /*chrome + safari*/
+    -moz-transform: skewY(-3deg); /*mozilla*/
+    -ms-transform: skewY(-3deg); /*IE*/
+}
+
+/*Stats*/
+.stats {
+    padding-top: 100px;
+}
+
+.stats-heading {
+    max-width: 500px; /*squeezes text tgt*/
+    margin: auto; /*sets text in middle*/
 
 }
 
-/*Utility class added to container class in order to make it a flex container so H1 can be positioned on left and h2 on right*/
-
-.flex {
-    display: flex;
-    justify-content: center; /*pertains to main axis*/
-    align-items: center;/*pertains to cross axis*/
-    height: 100%;/*100% height of container*/
+.stats .grid h3 {
+    font-size: 35px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap:20px;
-    justify-content: center;
-    align-items: center;
-    height: 100%; /*pushes items down to middle. showcase has height so grid needs one too*/
+.stats .grid p {
+    font-size: 20px;
+font-weight: bold;
 }
