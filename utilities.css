@@ -36,20 +36,42 @@
 
 /*Backgrounds and Coloured Buttons*/
 .bg-primary, .btn-primary {
-    border-color: var(--primary-color);
+    background-color: var(--primary-color);
     color: #fff;
 }
 .bg-secondary, .btn-secondary {
-    border-color: var(--secondary-color);
+    background-color: var(--secondary-color);
     color: #fff;
 }
 .bg-dark, .btn-dark {
-    border-color: var(--dark-color);
+    background-color: var(--dark-color);
     color: #fff;
 }
 .bg-light, .btn-light {
-    border-color: var(--light-color);
+    background-color: var(--light-color);
     color: #333;
+}
+
+/*Text Sizes*/
+
+.lead {/*paragraphs etc*/
+    font-size: 20px;
+}
+
+.sm {
+    font-size: 1rem;
+}
+
+.md {
+    font-size: 2rem
+}
+
+.lg {
+    font-size: 3rem;
+}
+
+.xl {
+    font-size: 4rem;
 }
 
 .text-center {
