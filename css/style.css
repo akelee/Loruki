@@ -194,7 +194,7 @@ font-weight: bold;
 
 /*Features*/
 
-.features-head img{
+.features-head img, .docs-head img{
     width:200px;
     justify-self: flex-end; /*pushes logo to end of grid container*/
 }
@@ -203,7 +203,9 @@ font-weight: bold;
     width:300px;
     justify-self: flex-end;
 }
-
+.features-main .card > i{    
+    margin-right: 20px;
+}
 .features-main .grid {
     padding:30px;
 }
@@ -215,8 +217,15 @@ font-weight: bold;
     grid-column: 1 / span 2;
 }
 
-.features-main .card > i{    
-    margin-right: 20px;
+/*Docs*/
+
+.docs-main h3 {
+    margin: 20px;
+}
+
+.docs-main .grid {
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start; /*along y-axis*/
 }
 
 /*Footer*/
