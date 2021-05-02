@@ -228,6 +228,17 @@ font-weight: bold;
     align-items: flex-start; /*along y-axis*/
 }
 
+.docs-main nav li{
+    font-size: 17px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.docs-main nav li:hover {
+    font-weight: bold;
+}
+
 /*Footer*/
 .footer .social a {
     margin: 0 10px;
