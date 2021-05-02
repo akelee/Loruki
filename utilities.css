@@ -85,6 +85,14 @@
 .text-center {
     text-align: center;
 }
+/*Alert*/
+
+.alert {
+    background-color: var(--light-color);
+    padding: 10px 20px;
+    font-weight: bold;
+    margin:15px 0;
+}
 
 /*Utility class added to container class in order to make it a flex container so H1 can be positioned on left and h2 on right*/
 
